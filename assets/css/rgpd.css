@@ -1,0 +1,149 @@
+body {
+     background-color: #000000;
+     color: #ffffffdc;
+     font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    border: solid rgb(0, 0, 0) 1px;
+    width: auto;
+    height: 25px;
+    background-color: #ff6600
+
+	;
+    padding: 15px;
+    margin-bottom:10px;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.8s;
+    display: block;
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #000000;
+    transform: scale(1.2);
+}
+
+#title {
+    margin-left: 50px;
+    margin-bottom: 20px;
+    color:#ff6600;
+    transition: 1s;
+    width:fit-content ;
+}
+#title:hover {
+    transform: scale(1.2);
+    color: #ffffff;
+    cursor: pointer;
+}
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #ccc;
+  margin-top: 60px;
+}
+
+footer a {
+  color: #ff6600;
+  text-decoration: none;
+  transition: 1s;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: none;
+}
+#head_items
+{
+    display: flex;
+    justify-content: space-between;
+}
+#colo
+{
+    display: flex;
+    justify-content: space-between;    
+}
+#colo_1
+{
+    width : 50px;
+    height: 50px;
+    border-radius: 150px;
+    border : white solid 2px;
+    margin : 5px;
+    background-color: #f16102;
+    cursor: pointer;
+}
+#colo_2
+{
+    background-color: #04b9f6;
+    width : 50px;
+    height: 50px;
+    border-radius: 150px;
+    border : white solid 2px;
+    margin : 5px;
+    cursor: pointer;
+}
+div , nav 
+{
+    transition : 1s;
+}
+body {
+    background-color: #000000;
+    color: #ffffffdc;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0 20px 40px 20px;
+}
+
+h2, h3, h4, h5, h6 {
+    color: #ff6600;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    transition: 1s;
+}
+
+p, ul {
+    line-height: 1.6;
+    color: #ddd;
+}
+
+ul {
+    margin-left: 1.5em;
+}
+
+a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00bfff;
+    text-decoration: underline;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+
