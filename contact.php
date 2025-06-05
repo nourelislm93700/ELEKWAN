@@ -32,7 +32,6 @@ if ($requete->execute()) {
         <meta charset='UTF-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <title>Confirmation de contact</title>
-<<<<<<< HEAD
         <link rel='stylesheet' href='assets/css/confirmation.css'>
 
         
@@ -40,77 +39,11 @@ if ($requete->execute()) {
     <body>
         <div class='confirmation-box'>
             <h1>Merci de nous avoir contactés ! , on revint vers vous dans les plus brefs délais !</h1>
-=======
-        <style>
-            body {
-                font-family: 'Century Gothic', Arial, sans-serif;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                margin: 0;
-                background-color: #000;
-                background-image: url('assets/img/paris_4.png');
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-position: center;
-                color: white;
-            }
-            .confirmation-box {
-                background-color: #7B1E1E; /* rouge bordeaux */
-                color: white;
-                padding: 25px;
-                border-radius: 15px;
-                max-width: 600px;
-                width: 90%;
-                border: 1px solid white;
-                text-align: center;
-                box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
-            }
-            .confirmation-box h1 {
-                font-size: 22px;
-                margin-bottom: 20px;
-                padding: 10px;
-                border: 1px solid white;
-                border-radius: 10px;
-                display: inline-block;
-            }
-            .confirmation-box p {
-                font-size: 17px;
-                margin: 10px 0;
-                text-align: left;
-            }
-            .confirmation-box a {
-                display: inline-block;
-                margin-top: 20px;
-                padding: 12px 25px;
-                background-color: #ff6600;
-                color: white;
-                text-decoration: none;
-                border-radius: 8px;
-                font-weight: bold;
-                transition: all 0.5s ease;
-            }
-            .confirmation-box a:hover {
-                background-color: #cccccc;
-                color: black;
-            }
-        </style>
-    </head>
-    <body>
-        <div class='confirmation-box'>
-            <h1>Merci de nous avoir contactés !</h1>
->>>>>>> 5f36edf0fe66fbdf0c842a9d0d64196453266ecb
             <p><strong>Nom complet :</strong> " . htmlspecialchars($nom_complet) . "</p>
             <p><strong>Email :</strong> " . htmlspecialchars($email) . "</p>
             <p><strong>Sujet :</strong> " . htmlspecialchars($sujet) . "</p>
             <p><strong>Message :</strong><br>" . nl2br(htmlspecialchars($message)) . "</p>
-<<<<<<< HEAD
             <a href='contact.html'>Retour au formulaire</a>
-=======
-            <a href='contact.php'>Retour au formulaire</a>
->>>>>>> 5f36edf0fe66fbdf0c842a9d0d64196453266ecb
         </div>
     </body>
     </html>
