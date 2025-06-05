@@ -92,11 +92,7 @@ function showText_10(el) {
           el.style.backgroundColor = '#00bfff';
         }
 
-        // Basculer les classes de hover
-        if (el.classList.contains('hover-orange')) {
-          el.classList.remove('hover-orange');
-          el.classList.add('hover-blue');
-        }
+      
       });
     }
 
@@ -110,9 +106,6 @@ function showText_10(el) {
         const bg = window.getComputedStyle(el).backgroundColor;
         if (bg === 'rgb(0, 191, 255)') el.style.backgroundColor = '#ff6600';
 
-        if (el.classList.contains('hover-blue')) {
-          el.classList.remove('hover-blue');
-          el.classList.add('hover-orange');
-        }
+    
       });
     }

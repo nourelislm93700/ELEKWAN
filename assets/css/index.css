@@ -123,16 +123,23 @@ footer {
   100% { opacity: 1; text-shadow: 0 0 10px #00bfff; }
 }
 
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #ccc;
+  margin-top: 60px;
+}
+
 footer a {
-    text-decoration: none;
-    color: white;
-    transition: 0.8s;
-    display: block;
-    width: 100%;
+  color: #ff6600;
+  text-decoration: none;
+  transition: 1s;
 }
 
 footer a:hover {
-    color: #000000;
+  color: white;
 }
 #head_items
 {
@@ -152,6 +159,7 @@ footer a:hover {
     border : white solid 5px;
     margin : 5px;
     background-color: #f76503;
+    cursor: pointer;
 }
 #colo_2
 {
@@ -161,6 +169,7 @@ footer a:hover {
     border-radius: 150px;
     border : white solid 5px;
     margin : 5px;
+    cursor: pointer;
 }
 div , nav 
 {
