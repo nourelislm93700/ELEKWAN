@@ -75,3 +75,44 @@ function showText_10(el) {
     createToggleText(el, message);
 }
 
+ function switchToBleu() {
+
+      // Change toutes les couleurs orange vers bleu
+      const allElements = document.querySelectorAll('*');
+
+      allElements.forEach(el => {
+        const color = window.getComputedStyle(el).color;
+
+        if (color === 'rgb(255, 102, 0)') {
+          el.style.color = '#00bfff';
+        }
+
+        const bg = window.getComputedStyle(el).backgroundColor;
+        if (bg === 'rgb(255, 102, 0)') {
+          el.style.backgroundColor = '#00bfff';
+        }
+
+        // Basculer les classes de hover
+        if (el.classList.contains('hover-orange')) {
+          el.classList.remove('hover-orange');
+          el.classList.add('hover-blue');
+        }
+      });
+    }
+
+ function switchToOrange() {
+
+      const allElements = document.querySelectorAll('*');
+      allElements.forEach(el => {
+        const color = window.getComputedStyle(el).color;
+        if (color === 'rgb(0, 191, 255)') el.style.color = '#ff6600';
+
+        const bg = window.getComputedStyle(el).backgroundColor;
+        if (bg === 'rgb(0, 191, 255)') el.style.backgroundColor = '#ff6600';
+
+        if (el.classList.contains('hover-blue')) {
+          el.classList.remove('hover-blue');
+          el.classList.add('hover-orange');
+        }
+      });
+    }
