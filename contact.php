@@ -1,57 +1,78 @@
 <?php
-$serveur = "localhost";
-$utilisateur = "root";
-$mot_de_passe = "190878Ab+";
-$base_de_donnees = "wanelec";
-
-$idcon = new mysqli($serveur, $utilisateur, $mot_de_passe, $base_de_donnees);
-if ($idcon->connect_error) {
-    die("La connexion à la base de données a échoué : " . $idcon->connect_error);
+session_start();
+if (empty($_SESSION['csrf_token'])) {
+  $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
-
-$nom_complet = trim($_POST['name'] ?? '');
-$email = trim($_POST['email'] ?? '');
-$sujet = trim($_POST['subject'] ?? '');
-$message = trim($_POST['message'] ?? '');
-
-if (!$nom_complet || !$email || !$sujet || !$message || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    die("Veuillez remplir correctement tous les champs du formulaire.");
-}
-
-$requete = $idcon->prepare("INSERT INTO contacts (nom_complet, email, sujet, message) VALUES (?, ?, ?, ?)");
-if (!$requete) {
-    die("Erreur de préparation de la requête : " . $idcon->error);
-}
-$requete->bind_param("ssss", $nom_complet, $email, $sujet, $message);
-
-if ($requete->execute()) {
-    echo "
-    <!DOCTYPE html>
-    <html lang='fr'>
-    <head>
-        <meta charset='UTF-8' />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-        <title>Confirmation de contact</title>
-        <link rel='stylesheet' href='assets/css/confirmation.css'>
-
-        
-    </head>
-    <body>
-        <div class='confirmation-box'>
-            <h1>Merci de nous avoir contactés ! , on revint vers vous dans les plus brefs délais !</h1>
-            <p><strong>Nom complet :</strong> " . htmlspecialchars($nom_complet) . "</p>
-            <p><strong>Email :</strong> " . htmlspecialchars($email) . "</p>
-            <p><strong>Sujet :</strong> " . htmlspecialchars($sujet) . "</p>
-            <p><strong>Message :</strong><br>" . nl2br(htmlspecialchars($message)) . "</p>
-            <a href='contact.html'>Retour au formulaire</a>
-        </div>
-    </body>
-    </html>
-    ";
-} else {
-    echo "Erreur lors de l'exécution de la requête : " . $requete->error;
-}
-
-$requete->close();
-$idcon->close();
 ?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Nour ELHADJ-M">
+  <meta name="keywords" content="travaux électriques, rénovation électrique, électricien professionnel, électricien particulier, normes électriques, dépannage électrique, domotique, installation électrique, mise aux normes, électricité bâtiment">
+  <meta name="description" content="WANELEC est spécialiste des travaux électriques, de la rénovation et du dépannage.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="icon" href="assets/img/logo.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+
+<body style="background-color: #100e0e; color: #ff6600;">
+  <header>
+    <div id="head_items">
+      <h1 id="title">WANELEC</h1>
+      <div id="colo">
+        <div id="colo_1" onclick="switchToOrange();"></div>
+        <div id="colo_2" onclick="switchToBleu();"></div>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.php">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="contact-form">
+    <h2>Contactez-nous</h2>
+    <form action="contact_post.php" method="post">
+      <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+      <div class="form-group">
+        <label for="name">Nom complet :</label>
+        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
+      </div>
+      <div class="form-group">
+        <label for="subject">Sujet :</label>
+        <input type="text" id="subject" name="subject" placeholder="Sujet de votre message" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms"><a href="rgpd.html">J'accepte les conditions générales</a></label>
+      </div>
+      <div class="form-group">
+        <button style="margin-bottom: 10px;" type="submit">Envoyer</button>
+        <br>
+        <button type="reset">Annuler</button>
+      </div>
+    </form>
+  </div>
+
+  <footer>
+    <p><a href="rgpd.html">&copy; 2025 - Tous droits réservés - WANELEC</a></p>
+  </footer>
+
+  <script src="assets/js/contact.js"></script>
+</body>
+</html>

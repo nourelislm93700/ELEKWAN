@@ -60,23 +60,31 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;    
 }
-#colo_1 {
-    width: 50px;
+#colo_1
+{
+    width : 50px;
     height: 50px;
     border-radius: 150px;
-    border: white solid 2px;
-    margin: 5px;
-    background-color: #f86503;
+    border : white solid 5px;
+    margin : 5px;
+    background-color: #f76503;
     cursor: pointer;
+    transition: 0.5s;
 }
-#colo_2 {
-    background-color: #03b9f6;
-    width: 50px;
+#colo_2
+{
+    background-color: #01b6f2;
+    width : 50px;
     height: 50px;
     border-radius: 150px;
-    border: white solid 2px;
-    margin: 5px;
+    border : white solid 5px;
+    margin : 5px;
     cursor: pointer;
+    transition : 0.5s;
+}
+#colo_1:hover, #colo_2:hover
+{
+    transform: scale(1.2);
 }
 div, nav {
     transition: 1s;

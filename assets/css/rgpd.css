@@ -87,20 +87,26 @@ footer a:hover {
     width : 50px;
     height: 50px;
     border-radius: 150px;
-    border : white solid 2px;
+    border : white solid 5px;
     margin : 5px;
-    background-color: #f16102;
+    background-color: #f76503;
     cursor: pointer;
+    transition: 0.5s;
 }
 #colo_2
 {
-    background-color: #04b9f6;
+    background-color: #01b6f2;
     width : 50px;
     height: 50px;
     border-radius: 150px;
-    border : white solid 2px;
+    border : white solid 5px;
     margin : 5px;
     cursor: pointer;
+    transition : 0.5s;
+}
+#colo_1:hover, #colo_2:hover
+{
+    transform: scale(1.2);
 }
 div , nav 
 {
