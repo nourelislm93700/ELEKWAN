@@ -60,6 +60,11 @@ unset($_SESSION['csrf_token']);
   <link rel="stylesheet" href="assets/css/confirmation.css" />
 </head>
 <body>
+    <video autoplay muted loop id="background-video">
+  <source src="assets/img/vid_1.mp4" type="video/mp4">
+  Ton navigateur ne supporte pas la vidéo HTML5.
+</video>
+
   <div class="confirmation-box">
     <h1>Votre message a été envoyé avec succès !</h1>
     <p><strong>Nom :</strong> <?= htmlspecialchars($nom) ?></p>

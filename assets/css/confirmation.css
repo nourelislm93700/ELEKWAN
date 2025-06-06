@@ -33,7 +33,6 @@ html, body {
   height: 100%;
   color: var(--text-color);
   font-family: 'Poppins', sans-serif;
-  background-color: #000;
   background-attachment: fixed;
   background-position: center;
   display: flex;
@@ -43,7 +42,6 @@ html, body {
 
 /* === CONFIRMATION BOX === */
 .confirmation-box {
-  background-color: var(--primary-color);
   color: var(--text-color);
   padding: 25px;
   border-radius: 15px;
