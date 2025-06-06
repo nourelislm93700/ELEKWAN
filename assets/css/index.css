@@ -22,7 +22,6 @@ body.theme-orange {
 
 /* === GLOBAL === */
 html,body {
-  background-color: #000000;
   color: #ffffffdc;
   font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
@@ -223,4 +222,17 @@ footer a:hover {
 header
 {
   margin : 10px;
+}
+
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;        /* derrière tout le contenu */
+  object-fit: cover;  /* couvre tout sans déformation */
+  filter: brightness(0.6); /* optionnel : assombrit un peu la vidéo */
 }

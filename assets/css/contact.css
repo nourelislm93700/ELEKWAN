@@ -136,6 +136,7 @@ nav ul li a:hover {
   max-width: 450px;
   width: 90%;
   padding: 30px;
+  padding-right: 50px;
   background-color: var(--form-bg-color);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
@@ -178,7 +179,7 @@ nav ul li a:hover {
 .form-group textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid var(--primary-color); /* ✅ correction ici */
+  border: 1px solid var(--primary-color);
   border-radius: 8px;
   font-size: 16px;
   background-color: #000;
@@ -247,4 +248,18 @@ footer a {
 
 footer a:hover {
   color: white;
+}
+
+/* === BACKGROUND VIDEO === */
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;        /* derrière tout le contenu */
+  object-fit: cover;  /* couvre tout sans déformation */
+  filter: brightness(0.6); /* optionnel : assombrit un peu la vidéo */
 }

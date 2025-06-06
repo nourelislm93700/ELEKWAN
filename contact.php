@@ -2,6 +2,10 @@
 // Inclusion du header
 include 'includes/header.php';
 ?>
+  <video autoplay muted loop id="background-video">
+  <source src="assets/img/vid_1.mp4" type="video/mp4">
+  Ton navigateur ne supporte pas la vidéo HTML5.
+</video>
 
 <div class="contact-form">
   <h2>Contactez-nous</h2>
