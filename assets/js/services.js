@@ -1,46 +1,37 @@
+// theme.js - Gestion des thèmes de couleur
+
+/**
+ * Change le thème en bleu
+ */
 function switchToBleu() {
-  // Change toutes les couleurs orange vers bleu
-  const allElements = document.querySelectorAll('*');
-
-  allElements.forEach(el => {
-    const style = window.getComputedStyle(el);
-
-    // Texte
-    if (style.color === 'rgb(255, 102, 0)') {
-      el.style.color = '#00bfff';
-    }
-
-    // Fond
-    if (style.backgroundColor === 'rgb(255, 102, 0)') {
-      el.style.backgroundColor = '#00bfff';
-    }
-
-    // Bordure
-    if (style.borderColor === 'rgb(255, 102, 0)') {
-      el.style.borderColor = '#00bfff';
-    }
-  });
+  document.body.classList.remove('theme-orange');
+  document.body.classList.add('theme-blue');
+  
+  // Sauvegarde la préférence de l'utilisateur (optionnel)
+  localStorage.setItem('theme', 'blue');
 }
 
+/**
+ * Change le thème en orange
+ */
 function switchToOrange() {
-  const allElements = document.querySelectorAll('*');
-
-  allElements.forEach(el => {
-    const style = window.getComputedStyle(el);
-
-    // Texte
-    if (style.color === 'rgb(0, 191, 255)') {
-      el.style.color = '#ff6600';
-    }
-
-    // Fond
-    if (style.backgroundColor === 'rgb(0, 191, 255)') {
-      el.style.backgroundColor = '#ff6600';
-    }
-
-    // Bordure
-    if (style.borderColor === 'rgb(0, 191, 255)') {
-      el.style.borderColor = '#ff6600';
-    }
-  });
+  document.body.classList.remove('theme-blue');
+  document.body.classList.add('theme-orange');
+  
+  // Sauvegarde la préférence de l'utilisateur (optionnel)
+  localStorage.setItem('theme', 'orange');
 }
+
+/**
+ * Initialise le thème au chargement de la page
+ */
+document.addEventListener('DOMContentLoaded', function() {
+  // Récupère le thème sauvegardé ou utilise orange par défaut
+  const savedTheme = localStorage.getItem('theme') || 'orange';
+  
+  if (savedTheme === 'blue') {
+    switchToBleu();
+  } else {
+    switchToOrange();
+  }
+});

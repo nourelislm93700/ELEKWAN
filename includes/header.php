@@ -10,7 +10,7 @@ if (empty($_SESSION['csrf_token'])) {
   <meta charset="UTF-8">
   <meta name="author" content="Nour ELHADJ-M">
   <meta name="keywords" content="travaux électriques, rénovation électrique, électricien professionnel, électricien particulier, normes électriques, dépannage électrique, domotique, installation électrique, mise aux normes, électricité bâtiment">
-  <meta name="description" content="WANELEC est spécialiste des travaux électriques, de la rénovation et du dépannage.">
+  <meta name="description" content="ELEKWAN est spécialiste des travaux électriques, de la rénovation et du dépannage.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact</title>
   <link rel="icon" href="assets/img/logo.png" type="image/png">
@@ -20,7 +20,7 @@ if (empty($_SESSION['csrf_token'])) {
 <body style="background-color: #100e0e; color: #ff6600;">
   <header>
     <div id="head_items">
-      <h1 id="title">WANELEC</h1>
+      <h1 id="title">ELEKWAN</h1>
       <div id="colo">
         <div id="colo_1" onclick="switchToOrange();"></div>
         <div id="colo_2" onclick="switchToBleu();"></div>

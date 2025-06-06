@@ -1,35 +1,38 @@
 
- function switchToBleu() {
+ // theme.js - Gestion des thèmes de couleur
 
-      // Change toutes les couleurs orange vers bleu
-      const allElements = document.querySelectorAll('*');
+/**
+ * Change le thème en bleu
+ */
+function switchToBleu() {
+  document.body.classList.remove('theme-orange');
+  document.body.classList.add('theme-blue');
+  
+  // Sauvegarde la préférence de l'utilisateur (optionnel)
+  localStorage.setItem('theme', 'blue');
+}
 
-      allElements.forEach(el => {
-        const color = window.getComputedStyle(el).color;
+/**
+ * Change le thème en orange
+ */
+function switchToOrange() {
+  document.body.classList.remove('theme-blue');
+  document.body.classList.add('theme-orange');
+  
+  // Sauvegarde la préférence de l'utilisateur (optionnel)
+  localStorage.setItem('theme', 'orange');
+}
 
-        if (color === 'rgb(255, 102, 0)') {
-          el.style.color = '#00bfff';
-        }
-
-        const bg = window.getComputedStyle(el).backgroundColor;
-        if (bg === 'rgb(255, 102, 0)') {
-          el.style.backgroundColor = '#00bfff';
-        }
-
-        
-      });
-    }
-
- function switchToOrange() {
-
-      const allElements = document.querySelectorAll('*');
-      allElements.forEach(el => {
-        const color = window.getComputedStyle(el).color;
-        if (color === 'rgb(0, 191, 255)') el.style.color = '#ff6600';
-
-        const bg = window.getComputedStyle(el).backgroundColor;
-        if (bg === 'rgb(0, 191, 255)') el.style.backgroundColor = '#ff6600';
-
-      
-      });
-    }
+/**
+ * Initialise le thème au chargement de la page
+ */
+document.addEventListener('DOMContentLoaded', function() {
+  // Récupère le thème sauvegardé ou utilise orange par défaut
+  const savedTheme = localStorage.getItem('theme') || 'orange';
+  
+  if (savedTheme === 'blue') {
+    switchToBleu();
+  } else {
+    switchToOrange();
+  }
+});

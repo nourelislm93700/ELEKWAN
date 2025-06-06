@@ -1,3 +1,30 @@
+/* Variables de couleur */
+:root {
+  --primary-color: #ff4400;
+  --secondary-color: rgb(41, 39, 38);
+  --text-color: white;
+  --hover-bg-color: #ffffff;
+  --hover-text-color: black;
+}
+
+/* Thème bleu */
+body.theme-blue {
+  --primary-color: #00bfff;
+  --secondary-color: rgb(30, 30, 40);
+  --text-color: white;
+  --hover-bg-color: #ffffff;
+  --hover-text-color: black;
+}
+
+/* Thème orange */
+body.theme-orange {
+  --primary-color: #ff4400;
+  --secondary-color: rgb(41, 39, 38);
+  --text-color: white;
+  --hover-bg-color: #ffffff;
+  --hover-text-color: black;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   display: flex;
@@ -6,20 +33,19 @@ body {
   height: 100vh;
   margin: 0;
   background-color: #000;
- 
   background-attachment: fixed;
   background-position: center;
-  color: white;
+  color: var(--text-color);
 }
 
 .confirmation-box {
-  background-color:#ff4400; 
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--text-color);
   padding: 25px;
   border-radius: 15px;
   max-width: 600px;
   width: 90%;
-  border: 1px solid white;
+  border: 1px solid var(--text-color);
   text-align: center;
 }
 
@@ -27,7 +53,7 @@ body {
   font-size: 22px;
   margin-bottom: 20px;
   padding: 10px;
-  border: 1px solid white;
+  border: 1px solid var(--text-color);
   border-radius: 10px;
   display: inline-block;
 }
@@ -42,16 +68,16 @@ body {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 25px;
-  background-color:rgb(41, 39, 38);
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
   transition: 1s ease;
-  width : 80%;
+  width: 80%;
 }
 
 .confirmation-box a:hover {
-  background-color: #ffffff;
-  color: black;
+  background-color: var(--hover-bg-color);
+  color: var(--hover-text-color);
 }
