@@ -79,17 +79,17 @@ nav ul li {
 }
 
 nav ul li a {
-  text-decoration: none;
+  text-decoration :none;
   color: white;
-  display: block;
-  width: 100%;
   transition: 0.8s;
 }
 
 nav ul li:hover {
   background-color: var(--hover-bg-color);
   transform: scale(1.2);
+  text-decoration: none;
 }
+
 
 nav ul li a:hover {
   color: var(--hover-text-color);
