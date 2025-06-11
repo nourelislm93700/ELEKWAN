@@ -15,23 +15,128 @@ if (empty($_SESSION['csrf_token'])) {
   <title>Contact</title>
   <link rel="icon" href="assets/img/logo.png" type="image/png">
   <link rel="stylesheet" href="assets/css/contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
 
-<body style="background-color: #100e0e; color: #ff6600;">
-  <header>
-    <div id="head_items">
-      <h1 id="title">ELEKWAN</h1>
-      <div id="colo">
-        <div id="colo_1" onclick="switchToOrange();"></div>
-        <div id="colo_2" onclick="switchToBleu();"></div>
-      </div>
-    </div>
+<body >
+  <header class="modern-header">
+        <!-- Barre supérieure -->
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <span class="choix-ex">⚡ Faites le choix de l’excellence avec ELEKWAN !</span>
+            </div>
+            <div class="top-bar-right">
+                <nav class="top-nav">
+                    <a href="">Carrières</a>
+                    <a href="">Support</a>
+                    <a href="">FAQ</a>
+                </nav>
+                <div class="social-icons">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a href=""><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
 
-    <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.php">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+        <!-- Section principale du header -->
+        <div class="main-header">
+            <!-- Logo section -->
+            <div class="logo-section">
+                <div class="logo-container">
+                    <i class="fas fa-bolt logo-icon"></i>
+                    <div class="logo-text">
+                        <span class="company-name">ELEKWAN</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informations de contact -->
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <strong>Paris, France</strong>
+                        <span>Île de France</span>
+                    </div>
+                </div>
+
+                <div class="contact-divider"></div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <strong>Contactez-nous</strong>
+                        <span>elekwan.support@exemple.fr</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bouton rendez-vous -->
+            <div class="appointment-section">
+                <button class="appointment-btn">Rendez-vous</button>
+            </div>
+        </div>
+
+        <!-- Navigation principale -->
+        <nav class="main-navigation">
+            <div class="nav-container">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            ACCUEIL
+                            <i class="fas fa-plus nav-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            PAGES
+                            <i class="fas fa-plus nav-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">
+                            SERVICES
+                            <i class="fas fa-plus nav-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            PROJETS
+                            <i class="fas fa-plus nav-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            BLOG
+                            <i class="fas fa-plus nav-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.php" class="nav-link">CONTACT</a>
+                    </li>
+                </ul>
+                
+                <div class="nav-right">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="emergency-call">
+                        <div class="emergency-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="emergency-details">
+                            <span class="emergency-label">APPELEZ NOUS </span>
+                            <span class="emergency-number">1800-456-7890</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>

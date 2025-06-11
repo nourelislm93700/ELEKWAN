@@ -3,7 +3,7 @@
 include 'includes/header.php';
 ?>
   <video autoplay muted loop id="background-video">
-  <source src="assets/img/vid_1.mp4" type="video/mp4">
+  <source src="assets/img/vid_3.mp4" type="video/mp4">
   Ton navigateur ne supporte pas la vidéo HTML5.
 </video>
 

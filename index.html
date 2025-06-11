@@ -4,76 +4,222 @@
     <meta charset="UTF-8">
     <meta name="author" content="Nour ELHADJ-M">
     <meta name="keywords" content="travaux électriques, rénovation électrique, électricien professionnel, électricien particulier, normes électriques, dépannage électrique, domotique, installation électrique, mise aux normes, électricité bâtiment">
-    <meta name="description" content="ELEKWAN est spécialiste des travaux électriques, de la rénovation et du dépannage. Nous intervenons pour les particuliers et les professionnels, avec des installations fiables, conformes aux normes et réalisées dans les règles de l’art.">
-
+    <meta name="description" content="ELEKWAN est spécialiste des travaux électriques, de la rénovation et du dépannage. Nous intervenons pour les particuliers et les professionnels, avec des installations fiables, conformes aux normes et réalisées dans les règles de l'art.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - ELEKWAN</title>
     <link rel="stylesheet" href="assets/css/index.css" type="text/css">
     <link rel="icon" href="assets/img/logo.png" type="image/png">
+    <!--  pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- navigation -->
+    <header class="modern-header">
+        <!-- Barre supérieure -->
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <span class="choix-ex">⚡ Faites le choix de l’excellence avec ELEKWAN !</span>
+            </div>
+            <div class="top-bar-right">
+                <nav class="top-nav">
+                    <a href="">Carrières</a>
+                    <a href="">Support</a>
+                    <a href="">FAQ</a>
+                </nav>
+                <div class="social-icons">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a href=""><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
 
-    <header>
-        <div id="head_items">
-        <h1 id="title">ELEKWAN</h1>
-        <div id="colo" >
-        <div id="colo_1" onclick="switchToOrange();" ></div>
-        <div id="colo_2" onclick="switchToBleu();"></div>
+        <!-- Section principale du header -->
+        <div class="main-header">
+            <!-- Logo section -->
+            <div class="logo-section">
+                <div class="logo-container">
+                    <i class="fas fa-bolt logo-icon"></i>
+                    <div class="logo-text">
+                        <span class="company-name">ELEKWAN</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informations de contact -->
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <strong>Paris, France</strong>
+                        <span>Île de France</span>
+                    </div>
+                </div>
+
+                <div class="contact-divider"></div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <strong>Contactez-nous</strong>
+                        <span>elekwan.support@exemple.fr</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bouton rendez-vous -->
+            <div class="appointment-section">
+                <button class="appointment-btn">Rendez-vous</button>
+            </div>
         </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.php">Contact</a></li>
-            </ul>
+
+        <!-- Navigation principale -->
+        <nav class="main-navigation">
+            <div class="nav-container">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            ACCUEIL
+                            <i class="fas fa-plus nav-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            PAGES
+                            <i class="fas fa-plus nav-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">
+                            SERVICES
+                            <i class="fas fa-plus nav-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            PROJETS
+                            <i class="fas fa-plus nav-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            BLOG
+                            <i class="fas fa-plus nav-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.php" class="nav-link">CONTACT</a>
+                    </li>
+                </ul>
+                
+                <div class="nav-right">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="emergency-call">
+                        <div class="emergency-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="emergency-details">
+                            <span class="emergency-label">APPELEZ NOUS </span>
+                            <span class="emergency-number">1800-456-7890</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </nav>
-
-
-
-
     </header>
-     <video autoplay muted loop id="background-video">
-  <source src="assets/img/vid_1.mp4" type="video/mp4">
-  Ton navigateur ne supporte pas la vidéo HTML5.
-</video>
+    <!-- Section Diaporama Photo -->
+    <section class="photo-slideshow">
+        <div class="slideshow-container">
+            <div class="slide active">
+                <img src="assets/img/img_d.png" alt="Installation électrique professionnelle">
+                <div class="slide-content">
+                    <h3>Installations Électriques</h3>
+                    <p>Des installations fiables et conformes aux normes</p>
+                </div>
+            </div>
+            
+            <div class="slide">
+                <img src="assets/img/img_g.avif" alt="Rénovation électrique moderne">
+                <div class="slide-content">
+                    <h3>Rénovation Électrique</h3>
+                    <p>Modernisation de vos installations existantes</p>
+                </div>
+            </div>
+            
+            <div class="slide">
+                <img src="assets/img/img_6.png" alt="Dépannage électrique d'urgence">
+                <div class="slide-content">
+                    <h3>Dépannage d'Urgence</h3>
+                    <p>Intervention rapide quand vous vlouez ! </p>
+                </div>
+            </div>
+            
+            <div class="slide">
+                <img src="assets/img/img_f.png" alt="Domotique et maison connectée">
+                <div class="slide-content">
+                    <h3>Domotique</h3>
+                    <p>Solutions intelligentes pour votre maison</p>
+                </div>
+            </div>
 
-    
+            <!-- Flèches de navigation -->
+            <button class="nav-arrow nav-arrow-left" onclick="changeSlide(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="nav-arrow nav-arrow-right" onclick="changeSlide(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
 
-    <div id="container_1">
-        
-        <h2 style="margin-bottom: 50px;" class="electric-text">Qui sommes-nous ?</h2>
-        <div id="nous">
-         <p style="margin-bottom: 20px;" >
-    ⚡ ELEKWAN, spécialiste des travaux électriques, rénovation et dépannage, met son expertise au service des particuliers et des professionnels. Nous vous garantissons des installations fiables, sécurisées et entièrement conformes aux normes en vigueur, pour votre tranquillité d’esprit !
-         </p>
+            <!-- Indicateurs de slides -->
+            <div class="slide-indicators">
+                <span class="indicator active" onclick="currentSlide(1)"></span>
+                <span class="indicator" onclick="currentSlide(2)"></span>
+                <span class="indicator" onclick="currentSlide(3)"></span>
+                <span class="indicator" onclick="currentSlide(4)"></span>
+            </div>
         </div>
-                <img id="pic3" alt="img_3" src="assets/img/logo.png"  loading="lazy">
+    </section>
 
-    <div class="line"></div>
+    <!-- Contenu principal -->
+    <main>
+        <div id="container_1">
+            <h2 style="margin-bottom: 50px;" class="electric-text">Qui sommes-nous ?</h2>
+            <div id="nous">
+                <p style="margin-bottom: 20px;">
+                    ⚡ ELEKWAN, spécialiste des travaux électriques, rénovation et dépannage, met son expertise au service des particuliers et des professionnels. Nous vous garantissons des installations fiables, sécurisées et entièrement conformes aux normes en vigueur, pour votre tranquillité d'esprit !
+                </p>
+            </div>
+            <img id="pic3" alt="img_3" src="assets/img/logo.png" loading="lazy">
 
+            <h2 class="electric-text">On s'engage à vous offrir !</h2>
 
-
-        <h2 class="electric-text"> On s'engage à vous offrir ! </h2>
-
-        <h2 class="title_2" onclick="showText_1(this);">Expertise professionnelle</h2>
-        <h2 class="title_2" onclick="showText_2(this);">Sécurité des installations</h2>
-        <h2 class="title_2" onclick="showText_3(this);">Conformité aux normes</h2>
-        <h2 class="title_2" onclick="showText_4(this);">Fiabilité des services</h2>
-        <h2 class="title_2" onclick="showText_5(this);">Réactivité et dépannage rapide</h2>
-        <h2 class="title_2" onclick="showText_6(this);">Accompagnement personnalisé</h2>
-        <h2 class="title_2" onclick="showText_7(this);">Intervention pour particuliers et professionnels</h2>
-        <h2 class="title_2" onclick="showText_8(this);">Qualité des matériaux et équipements</h2>
-        <h2 class="title_2" onclick="showText_9(this);">Respect des délais</h2>
-        <h2 class="title_2" onclick="showText_10(this);">Transparence et conseils avisés</h2>
-
-    </div>
+            <h2 class="title_2" onclick="showText_1(this);">Expertise professionnelle</h2>
+            <h2 class="title_2" onclick="showText_2(this);">Sécurité des installations</h2>
+            <h2 class="title_2" onclick="showText_3(this);">Conformité aux normes</h2>
+            <h2 class="title_2" onclick="showText_4(this);">Fiabilité des services</h2>
+            <h2 class="title_2" onclick="showText_5(this);">Réactivité et dépannage rapide</h2>
+            <h2 class="title_2" onclick="showText_6(this);">Accompagnement personnalisé</h2>
+            <h2 class="title_2" onclick="showText_7(this);">Intervention pour particuliers et professionnels</h2>
+            <h2 class="title_2" onclick="showText_8(this);">Qualité des matériaux et équipements</h2>
+            <h2 class="title_2" onclick="showText_9(this);">Respect des délais</h2>
+            <h2 class="title_2" onclick="showText_10(this);">Transparence et conseils avisés</h2>
+        </div>
+    </main>
 
     <footer>
-       <p> <a href="rgpd.html">&copy; 2025 - Tous droits réservés - ELEKWAN </a></p>
+        <p><a href="rgpd.html">&copy; 2025 - Tous droits réservés - ELEKWAN</a></p>
     </footer>
 
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/slideshow.js"></script>
+
+    
 </body>
 </html>
+
