@@ -117,9 +117,13 @@
                 </ul>
                 
                 <div class="nav-right">
-                    <button class="search-btn">
-                        <i class="fas fa-search"></i>
-                    </button>
+                    <div class="search-wrapper">
+    <button class="search-btn" id="toggleSearch">
+        <i class="fas fa-search"></i>
+    </button>
+    <input type="text" class="search-input" id="searchInput" placeholder="Rechercher...">
+</div>
+
                     <div class="emergency-call">
                         <div class="emergency-icon">
                             <i class="fas fa-phone"></i>
@@ -185,10 +189,33 @@
             </div>
         </div>
     </section>
+    <!-- DIV 2-->
+     <div class="features-section">
+  <div class="feature-box">
+    <i class="fas fa-user-tie feature-icon"></i>
+    <div>
+      <h4 class="feature-title">Équipe expérimentée</h4>
+      <p class="feature-subtitle">Plus de 5 ans</p>
+    </div>
+  </div>
 
-    <!-- Contenu principal -->
-    <main>
-        <div id="container_1">
+  <div class="feature-box highlighted">
+    <i class="fas fa-hand-holding-usd feature-icon"></i>
+    <div>
+      <h4 class="feature-title">Prix raisonnable</h4>
+      <p class="feature-subtitle">Tarification flexible</p>
+    </div>
+  </div>
+
+  <div class="feature-box">
+    <i class="fas fa-award feature-icon"></i>
+    <div>
+      <h4 class="feature-title">Service d'excellence</h4>
+      <p class="feature-subtitle">Pour chaque intervention</p>
+    </div>
+  </div>
+</div>
+ <div id="container_1">
             <h2 style="margin-bottom: 50px;" class="electric-text">Qui sommes-nous ?</h2>
             <div id="nous">
                 <p style="margin-bottom: 20px;">
@@ -196,21 +223,62 @@
                 </p>
             </div>
             <img id="pic3" alt="img_3" src="assets/img/logo.png" loading="lazy">
+ </div>
+<!-- DIV 3-->
+ 
+ <section class="services-section">
+  <h5 class="section-subtitle">NOS SERVICES  ? </h5>
+  <h2 class="section-title">Nous sommes votre <span class="highlight">électricien de confiance</span></h2>
 
-            <h2 class="electric-text">On s'engage à vous offrir !</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <img src="assets/img/img_g.avif" alt="Inspection">
+      <div class="service-overlay">
+        <div class="icon-badge"><i class="fas fa-lightbulb"></i></div>
+        <h4>Inspection</h4>
+        <p>Analyse complète et sécurisée</p>
+      </div>
+    </div>
 
-            <h2 class="title_2" onclick="showText_1(this);">Expertise professionnelle</h2>
-            <h2 class="title_2" onclick="showText_2(this);">Sécurité des installations</h2>
-            <h2 class="title_2" onclick="showText_3(this);">Conformité aux normes</h2>
-            <h2 class="title_2" onclick="showText_4(this);">Fiabilité des services</h2>
-            <h2 class="title_2" onclick="showText_5(this);">Réactivité et dépannage rapide</h2>
-            <h2 class="title_2" onclick="showText_6(this);">Accompagnement personnalisé</h2>
-            <h2 class="title_2" onclick="showText_7(this);">Intervention pour particuliers et professionnels</h2>
-            <h2 class="title_2" onclick="showText_8(this);">Qualité des matériaux et équipements</h2>
-            <h2 class="title_2" onclick="showText_9(this);">Respect des délais</h2>
-            <h2 class="title_2" onclick="showText_10(this);">Transparence et conseils avisés</h2>
-        </div>
-    </main>
+    <div class="service-card">
+      <img src="assets/img/img_b.png" alt="Installation">
+      <div class="service-overlay">
+        <div class="icon-badge"><i class="fas fa-plug"></i></div>
+        <h4>Installation</h4>
+        <p>Des solutions fiables et modernes</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="assets/img/img_a.png" alt="Maintenance">
+      <div class="service-overlay">
+        <div class="icon-badge"><i class="fas fa-tools"></i></div>
+        <h4>Maintenance</h4>
+        <p>Entretien rapide et efficace</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contenu principal -->
+   <main class="engagement-section">
+  <h2 class="electric-text">On s'engage à vous offrir :</h2>
+
+  <ul class="engagement-list">
+    <li onclick="showText_1(this);"> Expertise professionnelle</li>
+    <li onclick="showText_2(this);"> Sécurité des installations</li>
+    <li onclick="showText_3(this);"> Conformité aux normes</li>
+    <li onclick="showText_4(this);"> Fiabilité des services</li>
+    <li onclick="showText_5(this);"> Réactivité et dépannage rapide</li>
+    <li onclick="showText_6(this);"> Accompagnement personnalisé</li>
+    <li onclick="showText_7(this);"> Intervention particuliers & pros</li>
+    <li onclick="showText_8(this);"> Qualité des matériaux</li>
+    <li onclick="showText_9(this);"> Respect des délais</li>
+    <li onclick="showText_10(this);">Transparence & conseils avisés</li>
+  </ul>
+</main>
+
 
     <footer>
         <p><a href="rgpd.html">&copy; 2025 - Tous droits réservés - ELEKWAN</a></p>
@@ -218,7 +286,7 @@
 
     <script src="assets/js/index.js"></script>
     <script src="assets/js/slideshow.js"></script>
-
+    <script src="assets/js/search.js"></script>
     
 </body>
 </html>
