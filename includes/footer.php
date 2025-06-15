@@ -3,5 +3,6 @@
   </footer>
 
   <script src="assets/js/contact.js"></script>
+  <script src="assets/js/search.j"></script>
 </body>
 </html>

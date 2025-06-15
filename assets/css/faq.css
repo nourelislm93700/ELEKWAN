@@ -1,3 +1,6 @@
+/* ================================================
+   VARIABLES GLOBALES
+================================================= */
 :root {
   --primary-orange: #ff6600;
   --dark-bg: #2c2c2c;
@@ -8,7 +11,9 @@
   --border-gray: #e0e0e0;
 }
 
-/* === RESET ET BASE === */
+/* ================================================
+   RÉINITIALISATION & STYLES DE BASE
+================================================= */
 * {
   margin: 0;
   padding: 0;
@@ -22,14 +27,14 @@ html, body {
   background-color: var(--white);
 }
 
-/* === HEADER MODERNE === */
+/* === HEADER === */
 .modern-header {
   width: 100%;
   background-color: var(--black-bg);
   position: relative;
 }
 
-/* === BARRE SUPÉRIEURE === */
+/* Top Bar */
 .top-bar {
   background-color: grey;
   padding: 8px 0;
@@ -85,7 +90,7 @@ html, body {
   color: var(--primary-orange);
 }
 
-/* === SECTION PRINCIPALE DU HEADER === */
+/* Main Header */
 .main-header {
   background-color: var(--black-bg);
   padding: 20px 0;
@@ -98,7 +103,7 @@ html, body {
   padding-right: 20px;
 }
 
-/* === SECTION LOGO === */
+/* Logo Section */
 .logo-section {
   flex: 0 0 auto;
   margin-left: 10px;
@@ -129,10 +134,8 @@ html, body {
   color: var(--white);
   line-height: 1;
 }
-
-/* === INFORMATIONS DE CONTACT === */
+/* -- Informations de contact -- */
 .contact-info {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -156,20 +159,17 @@ html, body {
 }
 
 .contact-icon i {
-  font-size: 20px;
   color: var(--white);
+  font-size: 20px;
 }
 
 .contact-details {
-  display: flex;
-  flex-direction: column;
   color: var(--white);
 }
 
 .contact-details strong {
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 2px;
 }
 
 .contact-details span {
@@ -183,11 +183,7 @@ html, body {
   background-color: var(--primary-orange);
 }
 
-/* === SECTION RENDEZ-VOUS === */
-.appointment-section {
-  flex: 0 0 auto;
-}
-
+/* -- Bouton Rendez-vous -- */
 .appointment-btn {
   background-color: var(--primary-orange);
   color: var(--white);
@@ -207,7 +203,9 @@ html, body {
   box-shadow: 0 6px 20px rgba(255, 102, 0, 0.4);
 }
 
-/* === NAVIGATION PRINCIPALE === */
+/* ================================================
+   NAVIGATION PRINCIPALE
+================================================= */
 .main-navigation {
   background-color: var(--white);
   border-top: 1px solid var(--border-gray);
@@ -217,29 +215,22 @@ html, body {
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
 }
 
 .nav-menu {
   display: flex;
   list-style: none;
   gap: 30px;
-  align-items: center;
-}
-
-.nav-item {
-  position: relative;
 }
 
 .nav-link {
-  text-decoration: none;
   color: #333;
   font-weight: 600;
   font-size: 14px;
-  letter-spacing: 0.5px;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -254,6 +245,7 @@ html, body {
   font-size: 10px;
 }
 
+/* Section droite (recherche/urgence) */
 .nav-right {
   display: flex;
   align-items: center;
@@ -313,7 +305,7 @@ html, body {
     }
 }
 
-
+/* Appel d'urgence */
 .emergency-call {
   display: flex;
   align-items: center;
@@ -331,8 +323,8 @@ html, body {
 }
 
 .emergency-icon i {
-  font-size: 16px;
   color: var(--white);
+  font-size: 16px;
 }
 
 .emergency-details {
@@ -344,7 +336,6 @@ html, body {
   font-size: 12px;
   color: var(--primary-orange);
   font-weight: bold;
-  line-height: 1;
 }
 
 .emergency-number {
@@ -353,136 +344,85 @@ html, body {
   font-weight: bold;
 }
 
-/* === SECTION DIAPORAMA PHOTO === */
-.photo-slideshow {
-  width: 100%;
+/* ================================================
+   SECTION FAQ
+================================================= */
+.faq-section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  color: var(--primary-orange);
+}
+
+.faq-item {
   background-color: var(--light-gray);
-  padding: 0;
+  border: 1px solid var(--border-gray);
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-question {
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  color: #333;
+  background-color: #eee;
+  border-bottom: 1px solid var(--border-gray);
+  transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #e0e0e0;
+}
+
+.faq-question .icon {
+  font-size: 1.2em;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  background-color: var(--white);
+  color: var(--text-gray);
+}
+
+.faq-answer p {
+  padding-bottom: 20px;
   margin: 0;
 }
 
-.slideshow-container {
-  position: relative;
-  max-width: 100%;
-  height: 500px;
-  overflow: hidden;
-  background-color: var(--black-bg);
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.8s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.faq-item.active .faq-question .icon {
+  transform: rotate(180deg);
 }
 
-.slide.active {
-  opacity: 1;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.7);
-}
-
-.slide-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: var(--white);
-  z-index: 2;
-  padding: 30px 40px;
-}
-
-.slide-content h3 {
-  font-size: 2.5em;
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: var(--primary-orange);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-.slide-content p {
-  font-size: 1.2em;
-  line-height: 1.6;
-  color: var(--white);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-/* === FLÈCHES DE NAVIGATION === */
-.nav-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 102, 0, 0.8);
-  color: var(--white);
-  border: none;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.nav-arrow:hover {
+.faq-item.active .faq-question {
   background-color: var(--primary-orange);
-  transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.4);
+  color: var(--white);
 }
 
-.nav-arrow-left {
-  left: 30px;
-}
-
-.nav-arrow-right {
-  right: 30px;
-}
-
-/* === INDICATEURS DE SLIDES === */
-.slide-indicators {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 15px;
-  z-index: 3;
-}
-
-.indicator {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.indicator.active {
-  background-color: var(--primary-orange);
-  transform: scale(1.2);
-}
-
-.indicator:hover {
-  background-color: rgba(255, 102, 0, 0.8);
-}
-
-/* === FOOTER === */
+/* ================================================
+   FOOTER
+================================================= */
 footer {
   text-align: center;
   padding: 20px;
@@ -501,8 +441,11 @@ footer a:hover {
   color: var(--white);
 }
 
-/* === RESPONSIVE DESIGN === */
+/* ================================================
+   RESPONSIVE DESIGN
+================================================= */
 @media (max-width: 768px) {
+  /* Header */
   .top-bar {
     flex-direction: column;
     gap: 10px;
@@ -512,7 +455,6 @@ footer a:hover {
   .main-header {
     flex-direction: column;
     gap: 20px;
-    text-align: center;
   }
   
   .contact-info {
@@ -525,6 +467,7 @@ footer a:hover {
     height: 2px;
   }
   
+  /* Navigation */
   .nav-container {
     flex-direction: column;
     gap: 15px;
@@ -533,46 +476,12 @@ footer a:hover {
   .nav-menu {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-  }
-  
-  .emergency-call {
-    justify-content: center;
   }
 
-  .slideshow-container {
-    height: 400px;
-  }
-  
-  .slide-content {
-    padding: 20px 25px;
-  }
-  
-  .slide-content h3 {
-    font-size: 2em;
-  }
-  
-  .slide-content p {
-    font-size: 1em;
-  }
-  
-  .nav-arrow {
-    width: 50px;
-    height: 50px;
-    font-size: 16px;
-  }
-  
-  .nav-arrow-left {
-    left: 15px;
-  }
-  
-  .nav-arrow-right {
-    right: 15px;
-  }
-  
-  .indicator {
-    width: 12px;
-    height: 12px;
+  /* Search */
+  .search-input.active {
+    width: 150px;
+    right: 35px;
   }
 }
 
@@ -593,6 +502,14 @@ footer a:hover {
   .contact-item {
     flex-direction: column;
     text-align: center;
-    gap: 10px;
+  }
+
+  .faq-section {
+    padding: 30px 15px;
+  }
+
+  .section-title {
+    font-size: 2em;
+    margin-bottom: 30px;
   }
 }

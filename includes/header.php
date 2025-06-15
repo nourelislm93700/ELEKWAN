@@ -28,15 +28,16 @@ if (empty($_SESSION['csrf_token'])) {
             </div>
             <div class="top-bar-right">
                 <nav class="top-nav">
-                    <a href="">Carrières</a>
-                    <a href="">Support</a>
-                    <a href="">FAQ</a>
+            
+                    <a href="faq.html">FAQ</a>
                 </nav>
                 <div class="social-icons">
                     <a href=""><i class="fab fa-facebook-f"></i></a>
                     <a href=""><i class="fab fa-twitter"></i></a>
                     <a href=""><i class="fab fa-linkedin-in"></i></a>
                     <a href=""><i class="fab fa-youtube"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+
                 </div>
             </div>
         </div>
@@ -112,21 +113,20 @@ if (empty($_SESSION['csrf_token'])) {
                             <i class="fas fa-plus nav-icon"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            BLOG
-                            <i class="fas fa-plus nav-icon"></i>
-                        </a>
-                    </li>
+                   
                     <li class="nav-item">
                         <a href="contact.php" class="nav-link">CONTACT</a>
                     </li>
                 </ul>
                 
                 <div class="nav-right">
-                    <button class="search-btn">
-                        <i class="fas fa-search"></i>
-                    </button>
+                    <div class="search-wrapper">
+    <button class="search-btn" id="toggleSearch">
+        <i class="fas fa-search"></i>
+    </button>
+    <input type="text" class="search-input" id="searchInput" placeholder="Rechercher..." aria-label="Rechercher">
+</div>
+
                     <div class="emergency-call">
                         <div class="emergency-icon">
                             <i class="fas fa-phone"></i>
