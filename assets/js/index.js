@@ -75,3 +75,5 @@ function showText_10(el) {
     const message = "Nous croyons en une relation client basée sur la confiance. Les devis sont clairs, sans surprise, et expliqués en détail. Nous vous guidons vers les solutions les plus adaptées à vos besoins réels. Pas de vente forcée, pas de jargon technique inutile. Juste des conseils honnêtes, pour vous aider à faire les bons choix.";
     createToggleText(el, message);
 }
+
+

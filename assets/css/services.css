@@ -1,11 +1,28 @@
+/* === VARIABLES DE COULEUR === */
 :root {
   --primary-orange: #ff6600;
+  --raw-color : rgba(255, 102, 0, 0.8);
   --dark-bg: #2c2c2c;
   --black-bg: #1a1a1a;
   --white: #ffffff;
   --light-gray: #f5f5f5;
   --text-gray: #666666;
   --border-gray: #e0e0e0;
+  --shadow-box : rgba(255, 102, 0, 0.475);
+}
+/* ==== Thème alternatif bleu ==== */
+body.theme-blue {
+
+  --primary-orange: rgb(0, 204, 255);
+  --raw-color : rgba(0, 204, 255, 0.8);
+
+  --dark-bg: #2c2c2c;
+  --black-bg: #1a1a1a;
+  --white: #ffffff;
+  --light-gray: #f5f5f5;
+  --text-gray: #666666;
+  --border-gray: #e0e0e0;
+  --shadow-box : rgba(0, 204, 255, 0.265);
 }
 
 /* === RESET ET BASE === */
@@ -14,6 +31,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+#toggleTheme
+{
+  background-color: var(--primary-orange);
+  border-radius: 50%;
+  border : white 2px solid ;
+  width : 25px;
+  height : 25px;
+  transition : 0.5s;
+  cursor : pointer;
+  margin-left: 5px;
+  margin-right: 15px;
+}
+#toggleTheme:hover{
+  transform: scale(1.2);
+
+}
 
 html, body {
   font-family: 'Arial', sans-serif;
@@ -21,15 +54,17 @@ html, body {
   color: #333;
   background-color: var(--white);
 }
-
-/* === HEADER MODERNE === */
+body{
+  transition: 1s ease;
+}
+/* === HEADER === */
 .modern-header {
   width: 100%;
   background-color: var(--black-bg);
   position: relative;
 }
 
-/* === BARRE SUPÉRIEURE === */
+/* Top Bar */
 .top-bar {
   background-color: grey;
   padding: 8px 0;
@@ -46,6 +81,10 @@ html, body {
   color: var(--white);
   font-size: 14px;
   font-weight: 500;
+}
+.top-bar-left
+{
+  display: flex;
 }
 
 .top-bar-right {
@@ -85,7 +124,7 @@ html, body {
   color: var(--primary-orange);
 }
 
-/* === SECTION PRINCIPALE DU HEADER === */
+/* Main Header */
 .main-header {
   background-color: var(--black-bg);
   padding: 20px 0;
@@ -98,7 +137,7 @@ html, body {
   padding-right: 20px;
 }
 
-/* === SECTION LOGO === */
+/* Logo Section */
 .logo-section {
   flex: 0 0 auto;
   margin-left: 10px;
@@ -130,7 +169,7 @@ html, body {
   line-height: 1;
 }
 
-/* === INFORMATIONS DE CONTACT === */
+/* Contact Info */
 .contact-info {
   flex: 1;
   display: flex;
@@ -183,31 +222,8 @@ html, body {
   background-color: var(--primary-orange);
 }
 
-/* === SECTION RENDEZ-VOUS === */
-.appointment-section {
-  flex: 0 0 auto;
-}
 
-.appointment-btn {
-  background-color: var(--primary-orange);
-  color: var(--white);
-  border: none;
-  padding: 15px 30px;
-  border-radius: 50px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
-}
-
-.appointment-btn:hover {
-  background-color: #e55a00;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 102, 0, 0.4);
-}
-
-/* === NAVIGATION PRINCIPALE === */
+/* Main Navigation */
 .main-navigation {
   background-color: var(--white);
   border-top: 1px solid var(--border-gray);
@@ -313,7 +329,7 @@ html, body {
     }
 }
 
-
+/* Emergency Call */
 .emergency-call {
   display: flex;
   align-items: center;
@@ -353,7 +369,7 @@ html, body {
   font-weight: bold;
 }
 
-/* === SECTION DIAPORAMA PHOTO === */
+/* === SLIDESHOW SECTION === */
 .photo-slideshow {
   width: 100%;
   background-color: var(--light-gray);
@@ -419,12 +435,12 @@ html, body {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
-/* === FLÈCHES DE NAVIGATION === */
+/* Navigation Arrows */
 .nav-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 102, 0, 0.8);
+  background-color: var(--raw-color);
   color: var(--white);
   border: none;
   width: 60px;
@@ -442,7 +458,7 @@ html, body {
 .nav-arrow:hover {
   background-color: var(--primary-orange);
   transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.4);
+  box-shadow: 0 4px var(--shadow-box);
 }
 
 .nav-arrow-left {
@@ -453,7 +469,7 @@ html, body {
   right: 30px;
 }
 
-/* === INDICATEURS DE SLIDES === */
+/* Slide Indicators */
 .slide-indicators {
   position: absolute;
   bottom: 30px;
@@ -479,7 +495,213 @@ html, body {
 }
 
 .indicator:hover {
-  background-color: rgba(255, 102, 0, 0.8);
+  background-color: var(--shadow-box);
+}
+
+/* === FEATURES SECTION === */
+.features-section {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.feature-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.feature-box:not(:last-child) {
+  border-right: 1px solid #eee;
+}
+
+.feature-icon {
+  font-size: 32px;
+  color: var(--primary-orange);
+}
+
+.feature-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.feature-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.highlighted {
+  background-color: var(--primary-orange);
+  color: white;
+  border-radius: 8px;
+}
+
+.highlighted .feature-icon,
+.highlighted .feature-subtitle,
+.highlighted .feature-title {
+  color: white;
+}
+
+/* === QUI SOMMES-NOUS SECTION === */
+#container_1 {
+  text-align: center;
+  margin: 80px 0 20px 0;
+  padding: 0 20px;
+}
+
+.electric-text {
+  color: var(--primary-orange);
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+#nous {
+  text-align: center;
+  margin: 0 60px;
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+#pic3 {
+  width: 50%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  margin-top: 20px;
+  transition: transform 3s ease;
+  border-radius: 10px;
+}
+
+#pic3:hover {
+  transform: rotate(180deg);
+}
+
+/* === SERVICES SECTION === */
+.services-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-card {
+  position: relative;
+  width: 300px;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+.service-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.service-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 15px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: white;
+  text-align: left;
+}
+
+.icon-badge {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-orange);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.service-overlay h4 {
+  font-size: 18px;
+  margin: 5px 0 5px;
+}
+
+.service-overlay p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* === ENGAGEMENT SECTION === */
+.engagement-section {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.engagement-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.engagement-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.engagement-list li {
+  font-size: 1.2em;
+  margin: 12px 0;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: #444;
+  text-align: left;
+  background-color: var(--light-gray);
+  position: relative;
+  padding-left: 50px;
+}
+
+.engagement-list li:hover {
+  background-color: var(--shadow-box);
+  color: var(--primary-orange);
+  transform: translateX(5px);
+}
+
+.engagement-list li::before {
+  
+  position: absolute;
+  left: 20px;
+  color: var(--primary-orange);
 }
 
 /* === FOOTER === */
@@ -496,6 +718,15 @@ footer a {
   text-decoration: none;
   transition: color 0.3s ease;
 }
+#mail_contact
+{
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s ease; 
+}
+#mail_contact:hover {
+  color: var(--primary-orange);
+}
 
 footer a:hover {
   color: var(--white);
@@ -503,6 +734,7 @@ footer a:hover {
 
 /* === RESPONSIVE DESIGN === */
 @media (max-width: 768px) {
+  /* Header */
   .top-bar {
     flex-direction: column;
     gap: 10px;
@@ -540,6 +772,7 @@ footer a:hover {
     justify-content: center;
   }
 
+  /* Slideshow */
   .slideshow-container {
     height: 400px;
   }
@@ -574,6 +807,23 @@ footer a:hover {
     width: 12px;
     height: 12px;
   }
+
+  /* Features */
+  .features-section {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .feature-box:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  /* Services */
+  .services-grid {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -595,4 +845,54 @@ footer a:hover {
     text-align: center;
     gap: 10px;
   }
+
+  #nous {
+    margin: 0 20px;
+  }
+
+  .slide-content {
+    padding: 15px 20px;
+  }
+
+  .slide-content h3 {
+    font-size: 1.8em;
+  }
+
+  .slide-content p {
+    font-size: 0.9em;
+  }
 }
+
+
+
+
+
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--black-bg);
+  color: #ccc;
+  margin-top: 60px;
+}
+
+footer a {
+  color: var(--primary-orange);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--white);
+}
+#mail_contact
+{
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s ease; 
+}
+#mail_contact:hover {
+  color: var(--primary-orange);
+}
+

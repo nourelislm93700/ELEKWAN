@@ -20,15 +20,21 @@ if (empty($_SESSION['csrf_token'])) {
 </head>
 
 <body >
-  <header class="modern-header">
+     <header class="modern-header">
         <!-- Barre supérieure -->
         <div class="top-bar">
             <div class="top-bar-left">
-                <span class="choix-ex">⚡ Faites le choix de l’excellence avec ELEKWAN !</span>
+                    <div class="toggle-btn" id="toggleTheme"></div>
+
+                <span class="choix-ex"> Faites le choix de l’excellence avec ELEKWAN !</span>
+
+
             </div>
+
             <div class="top-bar-right">
+
                 <nav class="top-nav">
-            
+               
                     <a href="faq.html">FAQ</a>
                 </nav>
                 <div class="social-icons">
@@ -61,10 +67,11 @@ if (empty($_SESSION['csrf_token'])) {
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <div class="contact-details">
-                        <strong>Paris, France</strong>
-                        <span>Île de France</span>
+                        <strong> France</strong>
+                        <span> </span>
                     </div>
                 </div>
+
 
                 <div class="contact-divider"></div>
 
@@ -74,16 +81,14 @@ if (empty($_SESSION['csrf_token'])) {
                     </div>
                     <div class="contact-details">
                         <strong>Contactez-nous</strong>
-                        <span>elekwan.support@exemple.fr</span>
+              <span><a id="mail_contact" href="mailto:elekwan.bzh@gmail.com">elekwan.bzh@gmail.com</a></span>
                     </div>
                 </div>
             </div>
 
-            <!-- Bouton rendez-vous -->
-            <div class="appointment-section">
-                <button class="appointment-btn">Rendez-vous</button>
-            </div>
+
         </div>
+
 
         <!-- Navigation principale -->
         <nav class="main-navigation">
@@ -95,12 +100,7 @@ if (empty($_SESSION['csrf_token'])) {
                             <i class="fas fa-plus nav-icon"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            PAGES
-                            <i class="fas fa-plus nav-icon"></i>
-                        </a>
-                    </li>
+                  
                     <li class="nav-item">
                         <a href="services.html" class="nav-link">
                             SERVICES
@@ -108,19 +108,20 @@ if (empty($_SESSION['csrf_token'])) {
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="projet.html" class="nav-link">
                             PROJETS
                             <i class="fas fa-plus nav-icon"></i>
                         </a>
                     </li>
-                   
+                 
                     <li class="nav-item">
                         <a href="contact.php" class="nav-link">CONTACT</a>
                     </li>
                 </ul>
                 
                 <div class="nav-right">
-                    <div class="search-wrapper">
+             
+                <div class="search-wrapper">
     <button class="search-btn" id="toggleSearch">
         <i class="fas fa-search"></i>
     </button>
@@ -133,7 +134,7 @@ if (empty($_SESSION['csrf_token'])) {
                         </div>
                         <div class="emergency-details">
                             <span class="emergency-label">APPELEZ NOUS </span>
-                            <span class="emergency-number">1800-456-7890</span>
+                            <span class="emergency-number"> +33 6 08 83 89 45 </span>
                         </div>
                     </div>
                 </div>

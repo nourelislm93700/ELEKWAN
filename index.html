@@ -17,9 +17,15 @@
         <!-- Barre supérieure -->
         <div class="top-bar">
             <div class="top-bar-left">
-                <span class="choix-ex">⚡ Faites le choix de l’excellence avec ELEKWAN !</span>
+                    <div class="toggle-btn" id="toggleTheme"></div>
+
+                <span class="choix-ex"> Faites le choix de l’excellence avec ELEKWAN !</span>
+
+
             </div>
+
             <div class="top-bar-right">
+
                 <nav class="top-nav">
                
                     <a href="faq.html">FAQ</a>
@@ -59,6 +65,7 @@
                     </div>
                 </div>
 
+
                 <div class="contact-divider"></div>
 
                 <div class="contact-item">
@@ -67,16 +74,14 @@
                     </div>
                     <div class="contact-details">
                         <strong>Contactez-nous</strong>
-                        <span>elekwan.support@exemple.fr</span>
+              <span><a id="mail_contact" href="mailto:elekwan.bzh@gmail.com">elekwan.bzh@gmail.com</a></span>
                     </div>
                 </div>
             </div>
 
-            <!-- Bouton rendez-vous -->
-            <div class="appointment-section">
-                <button class="appointment-btn">Rendez-vous</button>
-            </div>
+
         </div>
+
 
         <!-- Navigation principale -->
         <nav class="main-navigation">
@@ -88,12 +93,7 @@
                             <i class="fas fa-plus nav-icon"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            PAGES
-                            <i class="fas fa-plus nav-icon"></i>
-                        </a>
-                    </li>
+                  
                     <li class="nav-item">
                         <a href="services.html" class="nav-link">
                             SERVICES
@@ -101,7 +101,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="projet.html" class="nav-link">
                             PROJETS
                             <i class="fas fa-plus nav-icon"></i>
                         </a>
@@ -224,7 +224,7 @@
 <!-- DIV 3-->
  
  <section class="services-section">
-  <h2 class="section-title">Nous sommes votre <span class="highlight-e" style="color: orange;font-weight: bold;">électricien de confiance</span></h2>
+  <h2 class="section-title">Nous sommes votre <span class="highlight-e" style="color: var(--primary-orange);font-weight: bold;">électricien de confiance</span></h2>
 
   <div class="services-grid">
     <div class="service-card">
@@ -283,6 +283,7 @@
     <script src="assets/js/index.js"></script>
     <script src="assets/js/slideshow.js"></script>
     <script src="assets/js/search.js"></script>
+    <script src="assets/js/theme.js"></script>
     
 </body>
 </html>

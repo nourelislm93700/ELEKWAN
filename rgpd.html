@@ -32,17 +32,21 @@
         Votre navigateur ne supporte pas la vidéo.
     </video>
 
-    <!-- ================================================
-         EN-TÊTE DU SITE (identique aux autres pages)
-    ================================================== -->
-    <header class="modern-header">
-        <!-- Barre supérieure (contacts et réseaux sociaux) -->
+     <header class="modern-header">
+        <!-- Barre supérieure -->
         <div class="top-bar">
             <div class="top-bar-left">
-                <span class="choix-ex">⚡ Faites le choix de l'excellence avec ELEKWAN !</span>
+                    <div class="toggle-btn" id="toggleTheme"></div>
+
+                <span class="choix-ex"> Faites le choix de l’excellence avec ELEKWAN !</span>
+
+
             </div>
+
             <div class="top-bar-right">
+
                 <nav class="top-nav">
+               
                     <a href="faq.html">FAQ</a>
                 </nav>
                 <div class="social-icons">
@@ -50,13 +54,15 @@
                     <a href=""><i class="fab fa-twitter"></i></a>
                     <a href=""><i class="fab fa-linkedin-in"></i></a>
                     <a href=""><i class="fab fa-youtube"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+
                 </div>
             </div>
         </div>
 
-        <!-- Section principale du header (logo, contacts, rdv) -->
+        <!-- Section principale du header -->
         <div class="main-header">
-            <!-- Logo -->
+            <!-- Logo section -->
             <div class="logo-section">
                 <div class="logo-container">
                     <i class="fas fa-bolt logo-icon"></i>
@@ -73,10 +79,11 @@
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <div class="contact-details">
-                        <strong>Paris, France</strong>
-                        <span>Île de France</span>
+                        <strong> France</strong>
+                        <span> </span>
                     </div>
                 </div>
+
 
                 <div class="contact-divider"></div>
 
@@ -86,16 +93,14 @@
                     </div>
                     <div class="contact-details">
                         <strong>Contactez-nous</strong>
-                        <span>elekwan.support@exemple.fr</span>
+              <span><a id="mail_contact" href="mailto:elekwan.bzh@gmail.com">elekwan.bzh@gmail.com</a></span>
                     </div>
                 </div>
             </div>
 
-            <!-- Bouton rendez-vous -->
-            <div class="appointment-section">
-                <button class="appointment-btn">Rendez-vous</button>
-            </div>
+
         </div>
+
 
         <!-- Navigation principale -->
         <nav class="main-navigation">
@@ -107,12 +112,7 @@
                             <i class="fas fa-plus nav-icon"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            PAGES
-                            <i class="fas fa-plus nav-icon"></i>
-                        </a>
-                    </li>
+                  
                     <li class="nav-item">
                         <a href="services.html" class="nav-link">
                             SERVICES
@@ -120,18 +120,19 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="projet.html" class="nav-link">
                             PROJETS
                             <i class="fas fa-plus nav-icon"></i>
                         </a>
                     </li>
+                 
                     <li class="nav-item">
                         <a href="contact.php" class="nav-link">CONTACT</a>
                     </li>
                 </ul>
                 
-                <!-- Section droite de la nav (recherche + urgence) -->
                 <div class="nav-right">
+             
                 <div class="search-wrapper">
     <button class="search-btn" id="toggleSearch">
         <i class="fas fa-search"></i>
@@ -145,7 +146,7 @@
                         </div>
                         <div class="emergency-details">
                             <span class="emergency-label">APPELEZ NOUS </span>
-                            <span class="emergency-number">1800-456-7890</span>
+                            <span class="emergency-number"> +33 6 08 83 89 45 </span>
                         </div>
                     </div>
                 </div>
@@ -153,9 +154,6 @@
         </nav>
     </header>
 
-    <!-- ================================================
-         CONTENU PRINCIPAL (POLITIQUE RGPD)
-    ================================================== -->
     <main class="rgpd-container">
         <h1>Politique de confidentialité et RGPD</h1>
 
@@ -284,5 +282,8 @@
          SCRIPTS JS
     ================================================== -->
     <script src="assets/js/rgpd.js"></script>
+    <script src="assets/js/search.js" ></script>
+      <script src="assets/js/theme.js"></script>
+
 </body>
 </html>
