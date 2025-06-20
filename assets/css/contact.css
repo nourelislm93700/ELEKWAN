@@ -52,7 +52,6 @@ html, body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: var(--white);
 }
 body{
   transition: 1s ease;
@@ -375,7 +374,7 @@ body{
   padding: 30px 50px 30px 30px;
   background-color: var(--black-bg);  /* sombre, comme le header */
   border-radius: 12px;
-  border :#ff6600 solid 3px;
+  border : var(--primary-orange) solid 3px;
   text-align: center;
   margin: 50px auto;
   transition: background-color 1s ease, border-color 1s ease;

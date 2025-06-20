@@ -8,7 +8,7 @@ include 'includes/header.php';
 </video>
 
 <div class="contact-form">
-  <h2>Contactez-nous</h2>
+  <h2> ENREGISTRER UNE DEMANDE  </h2>
   <form action="contact_post.php" method="post">
     <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
     <div class="form-group">

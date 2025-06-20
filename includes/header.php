@@ -115,7 +115,7 @@ if (empty($_SESSION['csrf_token'])) {
                     </li>
                  
                     <li class="nav-item">
-                        <a href="contact.php" class="nav-link">CONTACT</a>
+                        <a href="contact.php" class="nav-link"> ENREGISTRER UNE DEMANDE  </a>
                     </li>
                 </ul>
                 
