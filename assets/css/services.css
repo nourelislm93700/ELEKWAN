@@ -9,13 +9,12 @@
   --text-gray: #666666;
   --border-gray: #e0e0e0;
   --shadow-box : rgba(255, 102, 0, 0.475);
+  transition: all 1s ease; /* Ajout de la transition pour les variables CSS */
 }
 /* ==== Thème alternatif bleu ==== */
 body.theme-blue {
-
   --primary-orange: rgb(0, 204, 255);
   --raw-color : rgba(0, 204, 255, 0.8);
-
   --dark-bg: #2c2c2c;
   --black-bg: #1a1a1a;
   --white: #ffffff;
@@ -38,14 +37,13 @@ body.theme-blue {
   border : white 2px solid ;
   width : 25px;
   height : 25px;
-  transition : 0.5s;
+  transition : 1s; /* Changé de 0.5s à 1s */
   cursor : pointer;
   margin-left: 5px;
   margin-right: 15px;
 }
 #toggleTheme:hover{
   transform: scale(1.2);
-
 }
 
 html, body {
@@ -102,7 +100,7 @@ body{
   color: var(--white);
   text-decoration: none;
   font-size: 14px;
-  transition: color 0.3s ease;
+  transition: color 1s ease; /* Changé de 0.3s à 1s */
 }
 
 .top-nav a:hover {
@@ -117,7 +115,7 @@ body{
 .social-icons a {
   color: var(--white);
   font-size: 14px;
-  transition: color 0.3s ease;
+  transition: color 1s ease; /* Changé de 0.3s à 1s */
 }
 
 .social-icons a:hover {
@@ -150,6 +148,7 @@ body{
   align-items: center;
   gap: 15px;
   border-radius: 90px;
+  transition: background-color 1s ease; /* Ajout de la transition */
 }
 
 .logo-icon {
@@ -192,6 +191,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 1s ease; /* Ajout de la transition */
 }
 
 .contact-icon i {
@@ -220,6 +220,7 @@ body{
   width: 2px;
   height: 60px;
   background-color: var(--primary-orange);
+  transition: background-color 1s ease; /* Ajout de la transition */
 }
 
 
@@ -259,7 +260,7 @@ body{
   display: flex;
   align-items: center;
   gap: 5px;
-  transition: color 0.3s ease;
+  transition: color 1s ease; /* Changé de 0.3s à 1s */
 }
 
 .nav-link:hover {
@@ -310,7 +311,7 @@ body{
     font-size: 18px;
     color: #333;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: color 1s ease; /* Changé de 0.3s à 1s */
     padding: 8px;
 }
 
@@ -344,6 +345,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 1s ease; /* Ajout de la transition */
 }
 
 .emergency-icon i {
@@ -361,6 +363,7 @@ body{
   color: var(--primary-orange);
   font-weight: bold;
   line-height: 1;
+  transition: color 1s ease; /* Ajout de la transition */
 }
 
 .emergency-number {
@@ -426,6 +429,7 @@ body{
   margin-bottom: 15px;
   color: var(--primary-orange);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  transition: color 1s ease, text-shadow 1s ease; /* Ajout de la transition */
 }
 
 .slide-content p {
@@ -448,7 +452,7 @@ body{
   border-radius: 50%;
   font-size: 20px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 1s ease; /* Changé de 0.3s à 1s */
   z-index: 3;
   display: flex;
   align-items: center;
@@ -459,6 +463,7 @@ body{
   background-color: var(--primary-orange);
   transform: translateY(-50%) scale(1.1);
   box-shadow: 0 4px var(--shadow-box);
+  transition: background-color 1s ease, box-shadow 1s ease; /* Ajout de la transition */
 }
 
 .nav-arrow-left {
@@ -486,16 +491,18 @@ body{
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 1s ease; /* Changé de 0.3s à 1s */
 }
 
 .indicator.active {
   background-color: var(--primary-orange);
   transform: scale(1.2);
+  transition: background-color 1s ease; /* Ajout de la transition */
 }
 
 .indicator:hover {
   background-color: var(--shadow-box);
+  transition: background-color 1s ease; /* Ajout de la transition */
 }
 
 /* === FEATURES SECTION === */
@@ -515,34 +522,39 @@ body{
   gap: 15px;
   padding: 20px;
   text-align: left;
-  transition: all 0.3s ease;
+  transition: all 1s ease; /* Changé de 0.3s à 1s */
 }
 
 .feature-box:not(:last-child) {
-  border-right: 1px solid #eee;
+  border-right: none;
+  border-bottom: 1px solid #eee;
 }
 
 .feature-icon {
   font-size: 32px;
   color: var(--primary-orange);
+  transition: color 1s ease; /* Ajout de la transition */
 }
 
 .feature-title {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  transition: color 1s ease; /* Ajout de la transition */
 }
 
 .feature-subtitle {
   font-size: 14px;
   color: #666;
   margin: 0;
+  transition: color 1s ease; /* Ajout de la transition */
 }
 
 .highlighted {
   background-color: var(--primary-orange);
   color: white;
   border-radius: 8px;
+  transition: background-color 1s ease, color 1s ease; /* Ajout de la transition */
 }
 
 .highlighted .feature-icon,
@@ -563,6 +575,7 @@ body{
   font-size: 2.5em;
   margin-bottom: 30px;
   font-weight: bold;
+  transition: color 1s ease; /* Ajout de la transition */
 }
 
 #nous {
@@ -646,6 +659,7 @@ body{
   font-size: 18px;
   margin-bottom: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 1s ease; /* Ajout de la transition */
 }
 
 .service-overlay h4 {
@@ -682,7 +696,7 @@ body{
   margin: 12px 0;
   padding: 12px 20px;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  transition: all 1s ease; /* Changé de 0.3s à 1s */
   cursor: pointer;
   color: #444;
   text-align: left;
@@ -695,6 +709,7 @@ body{
   background-color: var(--shadow-box);
   color: var(--primary-orange);
   transform: translateX(5px);
+  transition: background-color 1s ease, color 1s ease; /* Ajout de la transition */
 }
 
 .engagement-list li::before {
@@ -702,6 +717,7 @@ body{
   position: absolute;
   left: 20px;
   color: var(--primary-orange);
+  transition: color 1s ease; /* Ajout de la transition */
 }
 
 /* === FOOTER === */
@@ -716,13 +732,13 @@ footer {
 footer a {
   color: var(--primary-orange);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 1s ease; /* Changé de 0.3s à 1s */
 }
 #mail_contact
 {
   color: var(--white);
   text-decoration: none;
-  transition: color 0.3s ease; 
+  transition: color 1s ease; /* Changé de 0.3s à 1s */
 }
 #mail_contact:hover {
   color: var(--primary-orange);
@@ -880,7 +896,7 @@ footer {
 footer a {
   color: var(--primary-orange);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 1s ease; /* Changé de 0.3s à 1s */
 }
 
 footer a:hover {
@@ -890,9 +906,8 @@ footer a:hover {
 {
   color: var(--white);
   text-decoration: none;
-  transition: color 0.3s ease; 
+  transition: color 1s ease; /* Changé de 0.3s à 1s */
 }
 #mail_contact:hover {
   color: var(--primary-orange);
 }
-
