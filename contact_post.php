@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// Vérification CSRF
+/* Vérification CSRF
 if (
     !isset($_POST['csrf_token'], $_SESSION['csrf_token']) ||
     $_POST['csrf_token'] !== $_SESSION['csrf_token']
@@ -9,7 +9,7 @@ if (
     http_response_code(403);
     exit("Requête invalide : échec de la vérification CSRF.");
 }
-
+*/
 // Connexion à la base de données
 $serveur = "localhost";
 $utilisateur = "root";
@@ -61,7 +61,7 @@ unset($_SESSION['csrf_token']);
 </head>
 <body>
     <video autoplay muted loop id="background-video">
-  <source src="assets/img/vid_1.mp4" type="video/mp4">
+  <source src="assets/img/vid_3.mp4" type="video/mp4">
   Ton navigateur ne supporte pas la vidéo HTML5.
 </video>
 

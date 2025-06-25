@@ -6,6 +6,10 @@
   --light-gray: #f5f5f5;
   --text-gray: #666666;
   --border-gray: #e0e0e0;
+  --text-color: #ffffff; /* Texte blanc partout */
+  --secondary-color: var(--primary-orange);
+  --hover-bg-color: #e0e0e0;
+  --hover-text-color: #000;
 }
 
 /* === RESET ET BASE === */
@@ -18,8 +22,21 @@
 html, body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: var(--white);
+  color: var(--text-color);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+}
+
+/* === CENTRAGE DU CONTENU === */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 /* === CONFIRMATION BOX === */
@@ -31,6 +48,10 @@ html, body {
   width: 90%;
   border: 1px solid var(--text-color);
   text-align: center;
+  background-color: transparent; /* plus de fond visible */
+  backdrop-filter: none;
+  z-index: 2;
+  position: relative;
 }
 
 .confirmation-box h1 {
@@ -53,11 +74,11 @@ html, body {
   margin-top: 20px;
   padding: 12px 25px;
   background-color: var(--secondary-color);
-  color: var(--text-color);
+  color: var(--white);
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
-  transition: 1s ease;
+  transition: 0.3s ease;
   width: 80%;
 }
 
@@ -69,13 +90,13 @@ html, body {
 /* === BACKGROUND VIDEO === */
 #background-video {
   position: fixed;
-  right: 0;
-  bottom: 0;
+  top: 0;
+  left: 0;
   min-width: 100%;
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: -1;        /* derrière tout le contenu */
-  object-fit: cover;  /* couvre tout sans déformation */
-  filter: brightness(0.6); /* optionnel : assombrit un peu la vidéo */
+  z-index: 0;
+  object-fit: cover;
+  filter: brightness(0.6);
 }

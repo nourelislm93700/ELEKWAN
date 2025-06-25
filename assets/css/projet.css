@@ -537,5 +537,9 @@ footer a:hover {
 #mail_contact:hover {
   color: var(--primary-orange);
 }
-
+#title_1
+{
+  margin-left: 25px;
+  margin-top: 50px;
+}
 
